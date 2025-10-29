@@ -1,0 +1,127 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+    margin-top:10px ;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+
+body{
+    /*Height for the webpage*/
+    min-height: 110vh;
+    background-image: url(musicsheet.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.table{
+    width: 82vw;
+    /*Height for the table*/
+    height: 95vh;
+    background-color: #fff5;
+    backdrop-filter: blur(7px);
+    box-shadow: 0.4rem .8rem #0005;
+    border-radius: .8rem;
+    overflow:hidden;
+}
+
+.table_header{
+    width:100%;
+    height: 10%;
+    background-color: #fff4;
+    padding:.8rem 1rem;
+}
+
+.table_body{
+    width: 95%;
+    /*height of the table*/
+    max-height: 82%;
+    background-color: #fffb;
+
+    margin:1.6rem auto;
+    border-radius: .6rem;
+    /*Able to scroll down to read more content*/
+    overflow: auto;
+}
+    
+/*For the row which is more then the table can store*/
+.table_body::-webkit-scrollbar{
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.table_body::-webkit-scrollbar-thumb{
+    border-radius: .5rem;
+    background-color: #004;
+    visibility: hidden;
+}
+
+.table_body:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+table{
+    width: 100%;
+}
+
+table,th,td{
+    /*Adjust the space between colum and row to define the total of data in the table*/
+    border-collapse: collapse;
+    padding:1rem;
+    text-align: left;
+}
+
+
+.content-source {
+    position: absolute;
+    bottom: -10%; /* Make the text at the end of page */
+    right: 10px;
+    width: max-content;
+    color: white;
+}
+
+thead th{
+    position: sticky;
+    top:0;
+    left: 0;
+    background-color: #ded8d1fe;
+}
+
+tbody tr:nth-child(even){
+    background-color: #00000005;
+}
+
+tbody tr:hover{
+    background-color: #fff6;
+}
+
+@media(max-width:1000px){
+    td:not(:first-of-type){
+        min-width: 12.1rem;
+    }
+}

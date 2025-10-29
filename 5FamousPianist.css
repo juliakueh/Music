@@ -1,0 +1,77 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+	background:linear-gradient(to top,rgb(42, 0, 0),rgb(139, 3, 3));;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 30px;
+    padding-top: 50px;
+    text-align: center;
+}
+
+header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 20px;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.card{
+    width: 325px;
+    height:610px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    /*Add 20px whitespace between card and card*/
+    margin:20px;
+    line-height: 1.5;
+    /*The timing to take by the system to make the effect when mouse hover*/
+    transition: transform 0.5s;
+    
+}
+
+.card img{
+    width:100%;
+    height:auto;
+}
+
+.card-content{
+    padding:10px;
+    
+}
+
+.card-content h3{
+    font-size: 28px;
+}
+
+.card-content p{
+    color:white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.image-source {
+    position: absolute;
+    bottom: -97%; /* Make the text at the end of page */
+    right: 10px;
+    color: white;
+}
+

@@ -1,0 +1,85 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    /*The width of the white color hearder*/
+    padding-top: 125px;
+    /*White space at the bottom*/
+    padding-bottom: 30px;
+    margin-bottom: 320px;
+    margin-top: -12%;
+    text-align: center;
+    z-index: 100;
+    position:absolute;
+    width: 355vh;
+}
+
+header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding-top: 50px;
+    /*Space between the text**/
+    margin: 30px;
+}
+
+body{
+    display:flex;
+    /*The window length would depends on the lenght of container*/
+    width: max-content;
+    align-items:center;
+    justify-content: center;
+    background-color: maroon;
+}
+
+.container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /*Define the position of the image container*/
+    margin-top: 12%;
+    margin-left: 15px;
+}
+
+.card img{
+    flex: 1;
+    height:38vh;
+    width:28vw;
+    border-radius: 3px;
+    margin: 0vh 5vh;
+    box-shadow: 4px 5px 15px #000000; 
+    transition: transform.5s;
+}
+
+img:hover{
+    /*The image would go up once mouse hover*/
+    transform:translateY(-110px);
+}
+
+.inbox{
+    height: 20vh;
+    width:28vw;
+    text-shadow:3px 2px 5px black;
+    color: white;
+    margin:5vh;
+    position: absolute;
+    /*text would be in the box, change the value would change the text position*/
+    top: 53vh;
+    z-index:-1 ;
+    transition: transform.5s;
+}
+
+.card:hover .inbox{
+    transform:translateY(58px);
+}
+
+.image-source {
+    position: absolute;
+    bottom: 0%; /* Make the text at the end of page */
+    right: -68%;
+    color: white;
+}

@@ -1,0 +1,139 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+	background:linear-gradient(to top,rgb(42, 0, 0),rgb(139, 3, 3));;
+    height: 100vh;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    padding-top: 60px;
+    text-align: center;
+}
+
+#title span{
+    color:maroon;
+} 
+
+.icons{
+    width: 50%;
+    height: 15px;
+    margin:auto;
+    margin-top:30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fa-solid{
+    font-size:25px;
+    transition: all 0.8s;
+}
+
+.fa-solid:hover{
+    cursor:pointer;
+    transform: scale(1.5)rotate(360deg);
+}
+
+header a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 20px;
+}
+
+.main-container{
+    width:100%;
+    height:500hv;
+    /*Position of the cards*/
+    margin-top:60px;
+    display:flex;
+    align-items:centre;
+    justify-content: space-evenly;
+}
+
+.containers{
+    width: 30%;
+    height: 400px;
+    box-shadow: rgb(0,0,0,0.3)3px 3px 6px 0px inset,rgb(0,0,0,0.3)3px 3px 6px 0px inset;
+    margin: 10px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 8.8s;
+}
+
+.first{
+    background-image: url(doublebass.jpg);
+}
+
+.second{
+    background-image: url(cello.jpg);
+}
+
+.third{
+    background-image: url(viola.jpg);
+}
+
+.fourth{
+    background-image: url(violin.jpg);
+}
+
+.fifth{
+    background-image: url(flute.jpg);
+}
+
+.sixth{
+    background-image: url(tuba.jpg);
+}
+
+.content{
+    width:100%;
+    height: 100%;
+    /*Position of the context in the card determine how many words can read before mouse hover*/
+    /*The larger the value, the further down the content's position.*/
+    transform: translateY(73%);
+    transition: 0.7s ease-in-out;
+}
+
+.content h1{
+    color:white;
+    margin-left: 25px;
+    font-size: 30px;
+    text-shadow: 1px 1px 1px black;
+    padding-top:70px;
+}
+
+.content p{
+    text-align: justify;
+    width: 75%;
+    color: white;
+    margin-left: 25px;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.content span{
+    margin-left: 25px;
+    color: white;
+    font-size: 14px;
+}
+
+.containers:hover>.content{
+    transform: translateY(0%);
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.6));
+}
+
+.image-source {
+    position: absolute;
+    bottom: 0%; /* Make the text at the end of page */
+    right: 0%;
+    color: white;
+}

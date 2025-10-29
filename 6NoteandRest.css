@@ -1,0 +1,182 @@
+*{
+    margin:0px; padding: 0px;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    text-transform:capitalize;
+    
+}
+
+html{
+    overflow-x: hidden;
+}
+
+body{
+	background:linear-gradient(to top,rgb(42, 0, 0),rgb(139, 3, 3));
+}
+
+.navbar {
+    /*The white space on the top of the navigation bar*/
+    padding-top: 50px;
+    padding-bottom: 15px;
+    /*Color of the navigation bar is white*/
+    background-color: rgb(255, 255, 255);
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+.container{
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 4rem 2rem;
+}
+
+.container .cards-container{
+    /* Grid is a value for the display property,used to create grid layouts for organizing content */
+    /* When enable the CSS Grid Layout, which allowsto define rows and columns to create a two-dimensional grid. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap:2rem;
+}
+
+.container .cards-container .note{
+    text-align: center;
+    /*Padding of the content */
+    padding: 3rem 2rem;
+    background: maroon;
+    /*Box shadow in left and bottom side of the cards*/
+    box-shadow: 0.5rem 1rem rgb(0, 0, 0.5);
+}
+
+.container .cards-container .note:hover{
+    outline: .2rem solid #222;
+    outline-offset: 0;
+}
+
+.container .cards-container .note img{
+    height: 20rem;
+}
+
+.container .cards-container .note:hover img{
+    transform: scale(.9);
+}
+
+.container .cards-container .note h3{
+    color: white;
+    padding: .5rem 0;
+    font-size: 1.5rem;
+}
+
+.container .cards-container .note:hover h3{
+    color: rgb(1, 1, 1);
+}
+
+.container .cards-container .note .category {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.cards-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,0.8);
+    display:none;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards-preview .preview{
+    display: none;
+    padding: 2rem;
+    text-align: center;
+    background: white;
+    position: relative;
+    margin: 2rem;
+    /*The preview's card size*/
+    width: 30rem;
+}
+
+.cards-preview .preview.active{
+    display: inline-block;
+}
+
+.cards-preview .preview img{
+    /*Image size for the preview*/
+    height: 15rem;
+}
+
+.cards-preview .preview .fa-times{
+    position: absolute;
+    top:1rem; right:1.5rem;
+    cursor:pointer;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.cards-preview .preview .fa-times:hover{
+     /*The "x" would rotate 180 and become bigger degree when mouse hover*/
+    transform:scale(1.2)rotate(180deg);
+    /*Times for react is 0.5 second*/
+    transition: .5s;
+
+}
+
+.cards-preview .preview h3{
+    /*Font color in the description box after click*/
+    color: rgb(0, 0, 0);
+    padding: .5rem 0;
+    font-size: 2rem;
+}
+
+.cards-preview .preview p{
+    padding: 1rem 0;
+    font-size: 16px;
+}
+
+
+.image-source {
+    position: absolute;
+    bottom: -428%; /* Make the text at the end of page */
+    right: 10px;
+    color: white;
+}
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px){
+    .cards-preview .preview img{
+        height: 30rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
