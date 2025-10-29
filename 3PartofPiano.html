@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 PartofPiano</title>
+    <link rel="stylesheet" href="3PartofPiano.css" />
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="1Default.html">Home</a></li>
+                    <li><a href="2Piano'sHistory.html">Piano's History</a></li>
+                    <li><a href="4PianoType.html">Piano Type</a></li>
+                    <li><a href="5FamousPianist.html">Famous Pianist</a></li>
+                    <li><a href="6NoteandRest.html">Note and Rest</a></li>
+                    <li><a href="7Dynamics.html">Dynamics</a></li>
+                    <li><a href="8Tempo.html">Tempo</a></li>
+                    <li><a href="9FunFact.html">Fun Fact</a></li>
+                    <li><a href="10AnotherInstrument.html">Another Instrument</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="information">
+            <div class="overlay">
+                <img src="piano.png" title="Concert Grand Piano" class="piano"/>
+            </div>
+            <div id="circle">
+                <div class="part one">
+                    <img src="pedals.png" alt="pedals"/>
+                    <div class="heading">
+                        <h1>Pedals</h1>
+                    </div>
+                    <div class="content One">
+                        <p>Soft pedal(left) is designed to shift the keyboard to the right to causes the hammers to
+                            strike only two out of three piano strings, creating a slightly softer sound effect.</p>
+                    </div>
+                    <div class="content Two">
+                        <p>When pressing the sostenuto pedal(middle), it lifts a rod in the piano that holds one key's
+                            damper off the strings.
+                            This allowing that note to keep playing while other notes are not affected, until release
+                            the sostenuto pedal.</p>
+                    </div>
+                    <div class="content Three">
+
+                        <p>Sustain Pedal(right) own the function just sound as it's name.
+                            Pressing the sustain pedal lifts all the dampers, letting strings resonate after releasing a
+                            key
+                            <a href="https://www.pianote.com/blog/how-pianos-work/#pedals">(Li, 2022).</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="part two">
+                    <img src="soundboard.png" alt="soundboard"/>
+                    <div class="heading">
+                        <h1>Soundboard</h1>
+                    </div>
+                    <div class="content One">
+                        <p>When a key is pressed, a hammer strikes the strings, initially creating a soft sound.
+                            The strings are attached to bridges that transmit their vibrations to the soundboard,
+                            making it vibrate and produce the loud sound that the entire piano generates
+                            <a
+                                href="https://www.yamaha.com/en/musical_instrument_guide/piano/mechanism/mechanism002.html#:~:text=The%20vibrations%20of%20the%20strings,the%20soundboard%20vibrating%20the%20air.">(Yamaha,(n.d)).</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="part three">
+                    <img src="damper.png" alt="damper"/>
+                    <div class="heading">
+                        <h1>Damper</h1>
+                    </div>
+                    <div class="content One">
+                        <p>The damper plays the role of controls the damping, or stopping of the string's vibration.
+                            Dampers can be found on most of the strings on the piano.
+                            The very high-pitched strings don't make as much sound as the longer ones and don't have
+                            dampers
+                            <a href="https://www.piano.christophersmit.com/damper.html">(smit, n.d.).</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="part four">
+                    <img src="whitemusicstand.png" alt="music stand"/>
+                    <div class="heading">
+                        <h1>MusicStand</h1>
+                    </div>
+                    <div class="content One">
+                        <p>The music desk is where the pianist places their sheet music. 
+                            It has a lower part called the music shelf that supports the bottom of the music. 
+                            The desk can be adjusted to different angles and folded down when sheet music isn't used. 
+                            <a href="https://www.piano.christophersmit.com/musicDesk.html#:~:text=The%20music%20desk%20is%20the,set%20at%20several%20different%20angles.">(smit, n.d.).</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <img src="arrow.png" alt="arrow" id="upBtn">
+            <h3>Parts</h3>
+            <img src="arrow.png" alt="arrow" id="downBtn">
+        </div>
+
+        <script>
+            var circle = document.getElementById("circle");
+            var upBtn = document.getElementById("upBtn");
+            var downBtn = document.getElementById("downBtn");
+
+            var rotateValue = circle.style.transform;
+            var rotateSum;
+
+            upBtn.onclick = function () {
+                rotateSum = rotateValue + "rotate(-90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+
+            downBtn.onclick = function () {
+                rotateSum = rotateValue + "rotate(90deg)";
+                circle.style.transform = rotateSum;
+                rotateValue = rotateSum;
+            }
+        </script>
+    </div>
+</body>
+
+</html>

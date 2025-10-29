@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>HomePage</title>
+    <style>
+        body {
+            cursor: none; /* Hide the default cursor */
+        }
+
+        header {
+            padding-left: 50px;
+            padding-top: 10px;
+            text-align: left;
+        }
+
+        .image-container {
+            text-align: right;
+            position: relative;
+            padding-right: 50px;
+        }
+
+        .image-container image {
+            width: 750px;
+            height: 600px;
+            padding-top: -10px;
+            padding-bottom: -10px;
+        }
+
+        .header-container {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            color: black;
+        }
+
+        .header-container h1 {
+            text-align: left;
+            margin: 0;
+            font-size: 40px;
+            
+        }
+
+        .description-container {
+            position: absolute;
+            top: 45%;
+            left: 50px;
+            transform: translateY(-50%);
+            color: black;
+            white-space: pre-line;
+            width: 650px;
+            text-align: start;
+            line-height: 3.0;
+            font-size: 16px;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 70%;
+            left: 50px;
+            z-index: 1;
+        }
+
+        .button {
+            background-color: maroon;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .highlight {
+            background-color: maroon;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="musicCursor" src="cursor.png" alt="Music Symbol" style="position: absolute; display: none;"/>
+
+    <header>
+        <h2>&#x1D11E; Music</h2>
+    </header>
+  
+    <div class="image-container" style="left: 0px; top: -10px; height: 600px;">
+        <!--"alt" stands for "alternative text" which used to provide a text description for an image, which can be displayed in case the image cannot be loaded -->
+        <img src="piano.jpg" alt="piano"/>
+        <p style="padding-right: 0%; font-size: 14px;">image source: <a
+                href="https://www.pexels.com/photo/red-rose-on-music-book-on-a-wooden-piano-8968276/">pexels</a></p>
+
+        <div class="header-container" style="left: 50px; top: 20px">
+            <h1>What has keys but can't listen to the beauty it unlocks?</h1>
+            <h1>A <span class="highlight">Piano</span></h1>
+        </div>
+
+        <div class="description-container">
+            <p>The piano is one of <span class="highlight">the oldest string instruments</span> with a rich history <span class="highlight">dating</span> back to the early <span class="highlight">18th century. It evolved from earlier</span> keyboard instruments, <span class="highlight">and its iconic sound is created by striking</span> strings with hammers.</p>
+        </div>
+
+        <div class="button-container">
+            <a href="2Piano'sHistory.html" class="button">Know More</a>
+        </div>
+    </div>
+
+    <script>
+        const musicCursor = document.getElementById('musicCursor');
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX;
+            mouseY = event.clientY;
+            updateMusicCursor();
+        });
+
+        function updateMusicCursor() {
+            musicCursor.style.display = 'block';
+            musicCursor.style.left = mouseX + 'px';
+            musicCursor.style.top = mouseY + 'px';
+        }
+
+        function hideDefaultCursor() {
+            document.body.style.cursor = 'none';
+        }
+    </script>
+</body>
+
+</html>
